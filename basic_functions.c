@@ -23,11 +23,11 @@ unsigned char is_odd(long number) {
 }
 
 double square(float number) {
-  return number*number;
+  return number * number;
 }
 
 double cube(float number) {
-  return number*square(number);
+  return number * square(number);
 }
 
 long gcd(long n1, long n2) {
@@ -43,11 +43,11 @@ long gcd(long n1, long n2) {
 }
 
 double fahrenheit_to_centigrade(float fahrenheit) {
-  return (fahrenheit-32)*(5/9);
+  return (fahrenheit-32) * (5 / 9);
 }
 
 double centigrade_to_fahrenheit(float centigrade) {
-  return (9/5)*centigrade + 32;
+  return (9 / 5) * centigrade + 32;
 }
 
 long greatest_of_three(long n1, long n2, long n3) {
@@ -55,12 +55,12 @@ long greatest_of_three(long n1, long n2, long n3) {
 }
 
 double average_of_three(long n1, long n2, long n3) {
-  return (n1+n2+n3)/3;
+  return (n1 + n2 + n3) / 3;
 }
 
 long lcm(long n1, long n2) {
   long hcf = gcd(n1, n2);
-  return n1*n2/hcf;
+  return n1 * n2 / hcf;
 }
 
 double simple_interest(float principle, float duration, float interest) {
