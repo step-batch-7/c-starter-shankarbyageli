@@ -93,52 +93,52 @@ int main() {
     case 3:
       printf("Enter the number: ");
       scanf("%f", &number);
-      printf("%lf\n", square(number));
+      printf("Square: %lf\n", square(number));
       break;
     case 4:
       printf("Enter tha number: ");
       scanf("%f", &number);
-      printf("%lf\n", cube(number));
+      printf("Cube: %lf\n", cube(number));
       break;
     case 5: 
       printf("Enter two numbers: ");
       scanf("%ld %ld", &n1, &n2);
-      printf("%ld\n", gcd(n1, n2));
+      printf("GCD of two numbers: %ld\n", gcd(n1, n2));
       break;
     case 6:
       printf("Enter two numbers: ");
       scanf("%ld %ld", &n1, &n2);
-      printf("%ld\n", lcm(n1, n2));
+      printf("LCM of two numbers: %ld\n", lcm(n1, n2));
       break;
     case 7:
       printf("Enter principle amount, duration and interest rate: ");
       scanf("%f %f %f", &principle, &duration, &interest);
-      printf("%lf\n", simple_interest(principle, duration, interest));
+      printf("Simple interest: %lf\n", simple_interest(principle, duration, interest));
       break;
     case 8:
       printf("Enter principle amount, duration and interest rate: ");
       scanf("%f %f %f", &principle, &duration, &interest);
-      printf("%lf\n", compound_interest(principle, duration, interest));
+      printf("Compound interest: %lf\n", compound_interest(principle, duration, interest));
       break;
     case 9:
       printf("Enter the temperature: ");
       scanf("%f", &temp);
-      printf("%lf\n", fahrenheit_to_centigrade(temp));
+      printf("Centigrade temperature: %lf\n", fahrenheit_to_centigrade(temp));
       break;
     case 10:
       printf("Enter the temperature: ");
       scanf("%f", &temp);
-      printf("%lf\n", centigrade_to_fahrenheit(temp));
+      printf("Fahrenheit temperature: %lf\n", centigrade_to_fahrenheit(temp));
       break;
     case 11:
       printf("Enter three numbers: ");
       scanf("%ld %ld %ld", &n1, &n2, &n3);
-      printf("%ld\n", greatest_of_three(n1, n2, n3));
+      printf("Greatest of three: %ld\n", greatest_of_three(n1, n2, n3));
       break;
     case 12:
       printf("Enter three numbers: ");
       scanf("%ld %ld %ld", &n1, &n2, &n3);
-      printf("%lf\n", average_of_three(n1, n2, n3));
+      printf("Average of given numbers: %lf\n", average_of_three(n1, n2, n3));
       break;
     default:
       printf("Invalid choice\n");
