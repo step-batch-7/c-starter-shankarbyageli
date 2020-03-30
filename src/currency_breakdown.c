@@ -11,7 +11,6 @@ int main(void) {
   int amount = 0;
   printf("Enter the amount: ");
   scanf("%d", &amount);
-  int count = 0;
   amount = denomination_count(amount, 2000);
   amount = denomination_count(amount, 500);
   amount = denomination_count(amount, 200);
@@ -22,4 +21,3 @@ int main(void) {
   amount = denomination_count(amount, 1);
   return 0;
 }
-

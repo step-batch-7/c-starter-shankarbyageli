@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 gcc src/$1
 if [ $? == 0 ]
