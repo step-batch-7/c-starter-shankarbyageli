@@ -14,8 +14,8 @@ long sum_of_even(int, int);
 
 unsigned long factorial(int number) {
   unsigned long factorial = 1;
-  for(long i = 1; i <= number; i++) {
-    factorial *= i;
+  for(long index = 1; index <= number; index++) {
+    factorial *= index;
   }
   return factorial;
 }
@@ -23,7 +23,7 @@ unsigned long factorial(int number) {
 void fibonacci(int no_of_terms) {
   long a = -1;
   long b = 1;
-  for(int i = 0; i < no_of_terms; i++) {
+  for(int index = 0; index < no_of_terms; index++) {
     printf("%ld\n", a + b);
     b = a + b;
     a = b - a;
@@ -31,55 +31,55 @@ void fibonacci(int no_of_terms) {
 }
 
 void odd_series(int N) {
-  for(int i = 1; i <= N; i += 2) {
-    printf("%d\n", i);
+  for(int index = 1; index <= N; index += 2) {
+    printf("%d\n", index);
   }
 }
 
 void even_series(int N) {
-  for(int i = 2; i <= N; i += 2) {
-    printf("%d\n", i);
+  for(int index = 2; index <= N; index += 2) {
+    printf("%d\n", index);
   }
 }
 
 void multiplication_table(int m, int n) {
-  for(int i = 1; i <= n; i++) {
-    printf("%d\n", m*i);
+  for(int index = 1; index <= n; index++) {
+    printf("%d\n", m*index);
   }
 }
 
 void print_odd_numbers(int start, int N) {
   int first_odd = start % 2 == 0 ? start + 1 : start;
-  for(int i = first_odd; i <= N; i += 2) {
-    printf("%d\n", i);
+  for(int index = first_odd; index <= N; index += 2) {
+    printf("%d\n", index);
   }
 }
 
 void print_nth_numbers(int N, int start, int end) {
-  for(int i = start; i <= end; i += N) {
-    printf("%d\n", i);
+  for(int index = start; index <= end; index += N) {
+    printf("%d\n", index);
   }
 }
 
 long sum_of_even(int start, int end) {
   int sum = 0;
   int first_num = start % 2 == 0 ? start : start + 1;
-  for(int i = first_num; i <= end; i += 2) {
-    sum += i;
+  for(int index = first_num; index <= end; index += 2) {
+    sum += index;
   }
   return sum;
 }
 
 void print_odd_backwards(int N) {
   int first_odd = N % 2 == 0 ? N - 1 : N;
-  for(int i = first_odd; i > 0; i -= 2) {
-    printf("%d\n", i);
+  for(int index = first_odd; index > 0; index -= 2) {
+    printf("%d\n", index);
   }
 }
 
 long product_of_N(int start, int N) {
   int product = 1;
-  for(int i = 0; i < N; i++, start++) {
+  for(int index = 0; index < N; index++, start++) {
     product *= start;
   }
   return product;
@@ -87,7 +87,7 @@ long product_of_N(int start, int N) {
 
 long sum_of_N(int start, int N) {
   int sum = 0;
-  for(int i = 0; i < N; i++, start++) {
+  for(int index = 0; index < N; index++, start++) {
     sum += start;
   }
   return sum;

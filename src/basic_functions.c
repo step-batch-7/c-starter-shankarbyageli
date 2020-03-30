@@ -30,9 +30,9 @@ double cube(float number) {
   return number * square(number);
 }
 
-long gcd(long n1, long n2) {
-  long dividend = n1 > n2 ? n1 : n2;
-  long divisor = n1 > n2 ? n2: n1;
+long gcd(long num1, long num2) {
+  long dividend = num1 > num2 ? num1 : num2;
+  long divisor = num1 > num2 ? num2: num1;
   long gcd = dividend;
   while(divisor != 0) {
     gcd = divisor;
@@ -43,24 +43,25 @@ long gcd(long n1, long n2) {
 }
 
 double fahrenheit_to_centigrade(float fahrenheit) {
-  return (fahrenheit-32) * (5 / 9);
+  return (fahrenheit - 32) * (5.0 / 9.0);
 }
 
 double centigrade_to_fahrenheit(float centigrade) {
-  return (9 / 5) * centigrade + 32;
+  return (9.0 / 5.0) * centigrade + 32;
 }
 
-long greatest_of_three(long n1, long n2, long n3) {
-  return n1 > n2 ? (n1 > n3 ? n1 : n3) : (n2 > n3 ? n2 : n3);
+long greatest_of_three(long num1, long num2, long num3) {
+  long largest_of_first_two = num1 > num2 ? num1 : num2;
+  return largest_of_first_two > num3 ? largest_of_first_two : num3;
 }
 
-double average_of_three(long n1, long n2, long n3) {
-  return (n1 + n2 + n3) / 3;
+double average_of_three(long num1, long num2, long num3) {
+  return (num1 + num2 + num3) / 3.0;
 }
 
-long lcm(long n1, long n2) {
-  long hcf = gcd(n1, n2);
-  return n1 * n2 / hcf;
+long lcm(long num1, long num2) {
+  long hcf = gcd(num1, num2);
+  return num1 * num2 / hcf;
 }
 
 double simple_interest(float principle, float duration, float interest) {
@@ -75,20 +76,20 @@ double compound_interest(float principle, float duration, float interest) {
 int main() {
   int choice = 1;
   float number, principle, duration, interest, temp;
-  long n1, n2, n3;
+  long num1, num2, num3;
   printf("1. is_even\n2. is_odd\n3. square\n4. cube\n5. greatest_common_divisor\n6. least_common_multiple\n7. simple_interest\n8. compound_interest\n9. fahrenheit_to_centigrade\n10. centigrade_to_fahrenheit\n11. greatest_of_three\n12. average_of_three\n\n");
   printf("Enter the function number to run: ");
   scanf("%d", &choice);
   switch(choice) {
     case 1:
       printf("Enter the number: ");
-      scanf("%ld", &n1);
-      printf("%ld is %s\n", n1, is_even(n1) ? "even" : "not even");
+      scanf("%ld", &num1);
+      printf("%ld is %s\n", num1, is_even(num1) ? "even" : "not even");
       break;
     case 2:
       printf("Enter the number: ");
-      scanf("%ld", &n1);
-      printf("%ld is %s\n", n1, is_odd(n1) ? "odd" : "not odd");
+      scanf("%ld", &num1);
+      printf("%ld is %s\n", num1, is_odd(num1) ? "odd" : "not odd");
       break;
     case 3:
       printf("Enter the number: ");
@@ -102,13 +103,13 @@ int main() {
       break;
     case 5: 
       printf("Enter two numbers: ");
-      scanf("%ld %ld", &n1, &n2);
-      printf("GCD of two numbers: %ld\n", gcd(n1, n2));
+      scanf("%ld %ld", &num1, &num2);
+      printf("GCD of two numbers: %ld\n", gcd(num1, num2));
       break;
     case 6:
       printf("Enter two numbers: ");
-      scanf("%ld %ld", &n1, &n2);
-      printf("LCM of two numbers: %ld\n", lcm(n1, n2));
+      scanf("%ld %ld", &num1, &num2);
+      printf("LCM of two numbers: %ld\n", lcm(num1, num2));
       break;
     case 7:
       printf("Enter principle amount, duration and interest rate: ");
@@ -132,13 +133,13 @@ int main() {
       break;
     case 11:
       printf("Enter three numbers: ");
-      scanf("%ld %ld %ld", &n1, &n2, &n3);
-      printf("Greatest of three: %ld\n", greatest_of_three(n1, n2, n3));
+      scanf("%ld %ld %ld", &num1, &num2, &num3);
+      printf("Greatest of three: %ld\n", greatest_of_three(num1, num2, num3));
       break;
     case 12:
       printf("Enter three numbers: ");
-      scanf("%ld %ld %ld", &n1, &n2, &n3);
-      printf("Average of given numbers: %lf\n", average_of_three(n1, n2, n3));
+      scanf("%ld %ld %ld", &num1, &num2, &num3);
+      printf("Average of given numbers: %lf\n", average_of_three(num1, num2, num3));
       break;
     default:
       printf("Invalid choice\n");
