@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<string.h>
 
 void decrypt(char *secret) {
   int big_offset = 65;
