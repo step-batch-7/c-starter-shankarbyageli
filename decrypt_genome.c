@@ -19,6 +19,7 @@ void decrypt(char *secret) {
 
 int main(void) {
   char genome[100];
+  printf("Enter the genome sequence: ");
   scanf("%[^\n]s", genome);
   decrypt(genome);
   printf("%s\n", genome);
